@@ -15,7 +15,7 @@ Uma calculadora feita em Dart que tem as seguintes funcionalidades:
 
 A calculadora roda no terminal e recebe input (entrada) do usuário para executar suas funcionalidades.
 
-(colocar imagem)
+![projeto calculadora dart](https://user-images.githubusercontent.com/22684176/230990651-d3edd0c9-b7c1-4d9f-895f-af710b2085d2.gif)
 
 Primeiro é pedido no terminal que a pessoa digite o primeiro valor. Os valores devem ser **inteiros**.
 
@@ -44,7 +44,7 @@ dart run --enable-asserts
 Para rodar os testes, execute o seguinte comando:
 
 ```shell
-dart test
+dart test --reporter=github
 ```
 
 ## Objetivos deste projeto
