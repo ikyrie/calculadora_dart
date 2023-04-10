@@ -1,27 +1,52 @@
 class Calculadora {
-  Calculadora(this.a, this.b, this.operacao);
+  Calculadora({required this.a, required this.operacao, required this.b});
 
   final int a;
-  final int b;
   final String operacao;
+  final int b;
 
-  int adicao() {
+  static int adicao(a, b) {
     return a + b;
   }
 
-  int subtracao() {
+  static int subtracao(a, b) {
     return a - b;
   }
 
-  int multiplicacao() {
+  static int multiplicacao(a, b) {
     return a * b;
   }
 
-  double divisao() {
+  static double divisao(a, b) {
     return a / b;
   }
 
-  void calculaResultado(resultado) {
+  static void imprimeResultado(resultado) {
     print(resultado);
   }
+
+  void calculaResultado() {
+    switch (operacao) {
+      case "+":
+        imprimeResultado(adicao(a, b));
+        break;
+
+      case "-":
+        imprimeResultado(subtracao(a, b));
+        break;
+      
+      case "*":
+        imprimeResultado(multiplicacao(a, b));
+        break;
+
+      case "/":
+        imprimeResultado(divisao(a, b));
+        break;
+      
+      default:
+        print("Operação inválida");
+        break;
+    }
+  }
+
 }
